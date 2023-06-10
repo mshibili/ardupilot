@@ -6,6 +6,12 @@
 
 #define LEAKDETECTOR_COOLDOWN_MS 3000 // Status will return true for this long after last time leak was detected
 
+/*------ADDED MACRO DEFINITIONS-----------*/
+
+#define LEAK_SENSOR_DELAY 1000
+
+/*----------------------------------------*/
+
 class AP_LeakDetector_Backend;
 
 class AP_LeakDetector {
@@ -22,6 +28,10 @@ public:
     struct LeakDetector_State {
         uint8_t instance;
         bool status; // leaking?
+
+        /*------ADDED Structure member-----------*/        
+        bool sensorPulse;
+        uint32_t lastPulse;
     };
 
     // Return current status
