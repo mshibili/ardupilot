@@ -8,7 +8,7 @@
 
 /*------ADDED MACRO DEFINITIONS-----------*/
 
-#define LEAK_SENSOR_DELAY 1000
+#define LEAK_SENSOR_DELAY 5000
 
 /*----------------------------------------*/
 
